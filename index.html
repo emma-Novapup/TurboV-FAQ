@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,9 +49,8 @@
             font-weight: bold;
             transition: 0.3s;
         }
-        .back-link:hover { opacity: 0.8; }
+        .back-link:hover { opacity: 0.8; transform: translateX(-5px); }
 
-        /* FAQ Accordion Styling */
         .faq-item {
             background: var(--card);
             backdrop-filter: blur(12px);
@@ -78,10 +76,9 @@
         .faq-answer {
             padding: 0 25px 20px 25px;
             color: #94a3b8;
-            display: none; /* Controlled by JS or keep simple with text */
+            display: none;
         }
 
-        /* Show answer class */
         .faq-item.active .faq-answer { display: block; }
         .faq-item.active .faq-question { color: var(--primary); }
 
@@ -97,7 +94,7 @@
 <body>
 
     <div class="container">
-        <a href="https://emma-novapup.github.io/" class="back-link">← Back to Main Site</a>
+        <a href="https://emma-novapup.github.io/TurboV/" class="back-link">← Back to TurboV Main Site</a>
         
         <div class="header">
             <h1>Frequently Asked Questions</h1>
@@ -141,7 +138,7 @@
                     <span>+</span>
                 </div>
                 <div class="faq-answer">
-                    You can manage your services through our specialized game panel. Login details are sent to your email immediately after purchase.
+                    You can manage your services through our specialized panel. Login details are sent to your email immediately after purchase.
                 </div>
             </div>
         </div>
