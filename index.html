@@ -1,1 +1,155 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | TurboV Hosting Support</title>
+    
+    <link rel="icon" type="image/png" href="TurboVlogo2.png">
+
+    <style>
+        :root { 
+            --primary: #38bdf8; 
+            --bg: #0f172a; 
+            --card: rgba(30, 41, 59, 0.85); 
+            --accent: rgba(56, 189, 248, 0.2);
+        }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--bg);
+            background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), 
+                        url('./TurboV.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: white; 
+            margin: 0; 
+            line-height: 1.6; 
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+            flex: 1;
+        }
+
+        .header { text-align: center; margin-bottom: 50px; }
+        .header h1 { font-size: 3rem; color: var(--primary); margin-bottom: 10px; }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .back-link:hover { opacity: 0.8; }
+
+        /* FAQ Accordion Styling */
+        .faq-item {
+            background: var(--card);
+            backdrop-filter: blur(12px);
+            border-radius: 15px;
+            border: 1px solid rgba(51, 65, 85, 0.5);
+            margin-bottom: 15px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+        
+        .faq-item:hover { border-color: var(--primary); }
+
+        .faq-question {
+            padding: 20px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .faq-answer {
+            padding: 0 25px 20px 25px;
+            color: #94a3b8;
+            display: none; /* Controlled by JS or keep simple with text */
+        }
+
+        /* Show answer class */
+        .faq-item.active .faq-answer { display: block; }
+        .faq-item.active .faq-question { color: var(--primary); }
+
+        footer { 
+            padding: 40px; 
+            text-align: center; 
+            border-top: 1px solid rgba(51, 65, 85, 0.3); 
+            color: #94a3b8; 
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="https://emma-novapup.github.io/" class="back-link">← Back to Main Site</a>
+        
+        <div class="header">
+            <h1>Frequently Asked Questions</h1>
+            <p>Everything you need to know about TurboV Hosting.</p>
+        </div>
+
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    How long does it take to deploy my server?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Most servers are deployed instantly! Once your payment is confirmed, your VPS or Discord Bot hosting environment is set up automatically within minutes.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    What locations do you offer for VPS?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    We currently offer high-performance nodes in premium data centers to ensure the lowest possible latency for your applications.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    Do you provide DDoS protection?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Yes! All TurboV Hosting plans come with enterprise-grade DDoS protection as standard to keep your bots and servers online 24/7.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    How do I access my Bot or VPS?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    You can manage your services through our specialized game panel. Login details are sent to your email immediately after purchase.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 TurboV Hosting. Professional Support for High-Performance Hosting.</p>
+    </footer>
+
+</body>
+</html>
